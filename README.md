@@ -50,3 +50,19 @@ WHERE LENGTH(content) > 15;
 ```
 
 ---
+
+6 - [1378. Replace Employee ID With The Unique Identifier](https://leetcode.com/problems/replace-employee-id-with-the-unique-identifier/description/?envType=study-plan-v2&envId=top-sql-50)
+```SQL
+SELECT eu.unique_id, e.name FROM Employees AS e
+LEFT JOIN EmployeeUNI AS eu
+ON e.id = eu.id;
+```
+
+---
+
+7 - [1068. Product Sales Analysis I](https://leetcode.com/problems/product-sales-analysis-i/description/?envType=study-plan-v2&envId=top-sql-50)
+```SQL
+SELECT p.product_name, s.year, s.price FROM Sales AS s
+INNER JOIN Product AS p
+ON s.product_id = p.product_id;
+```
